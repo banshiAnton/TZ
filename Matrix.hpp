@@ -7,3 +7,5 @@ void sort(int**, int, int, int);
 void arch(int **, int, int**, int*, int**, int*);
 
 void showArr(int*, int);
+
+void sum(int**, int**, int);

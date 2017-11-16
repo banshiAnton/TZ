@@ -17,9 +17,11 @@ int main()
     // cin>>opt1;
 
     int **matrix = new int *[N];// = make(N, opt1);
+    int **matrix2 = new int *[N];
     for(int i = 0; i < N; i++)
     {
         matrix[i] = new int [N];
+        matrix2[i] = new int [N];
     };
 
     int *archArr(0);
@@ -54,13 +56,46 @@ int main()
     matrix[4][2] = 0;
     matrix[4][3] = 5;
     matrix[4][4] = 1;
+
+
+    matrix2[0][0] = 0;
+    matrix2[0][1] = 0;
+    matrix2[0][2] = 5;
+    matrix2[0][3] = 6;
+    matrix2[0][4] = 8;
+
+    matrix2[1][0] = 9;
+    matrix2[1][1] = 7;
+    matrix2[1][2] = 1;
+    matrix2[1][3] = 0;
+    matrix2[1][4] = 5;
+
+    matrix2[2][0] = 9;
+    matrix2[2][1] = 3;
+    matrix2[2][2] = 5;
+    matrix2[2][3] = 74;
+    matrix2[2][4] = 8;
+
+    matrix2[3][0] = 5;
+    matrix2[3][1] = 0;
+    matrix2[3][2] = 0;
+    matrix2[3][3] = 3;
+    matrix2[3][4] = 8;
+
+    matrix2[4][0] = 5;
+    matrix2[4][1] = 54;
+    matrix2[4][2] = 5;
+    matrix2[4][3] = 5;
+    matrix2[4][4] = 1;
+
+    sum(matrix, matrix2, N);
     //show(matrix, N);
 
-    arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    showArr(archArr, archLeng);
+    // showArr(archArr, archLeng);
 
-    showArr(zeroIndexArr, zeloLeng);
+    // showArr(zeroIndexArr, zeloLeng);
 
     // for(int i = 0 ; i < archLeng; i++)
     // {
