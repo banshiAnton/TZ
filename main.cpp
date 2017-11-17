@@ -8,6 +8,7 @@ int main()
 {
     //cout<<"Make Matrix NxN\nInput N = ";
     int N = 5;
+    int N2 = 5;
     int archLeng = 0;
     int zeloLeng = 0;
     // cin>>N;
@@ -88,10 +89,18 @@ int main()
     matrix2[4][3] = 5;
     matrix2[4][4] = 1;
 
-    sum(matrix, matrix2, N);
-    //show(matrix, N);
+    //sum(matrix, matrix2, N);
+    show(matrix, N);
 
-    // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    showArr(archArr, archLeng);
+
+    showArr(zeroIndexArr, zeloLeng);
+
+    unarch(&matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    show(matrix, N);
 
     // showArr(archArr, archLeng);
 
