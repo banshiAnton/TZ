@@ -91,16 +91,17 @@ int main()
 
     //sum(matrix, matrix2, N);
     show(matrix, N);
+    deletLocalMaxMin(matrix, N, 1);
 
-    arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    showArr(archArr, archLeng);
+    // showArr(archArr, archLeng);
 
-    showArr(zeroIndexArr, zeloLeng);
+    // showArr(zeroIndexArr, zeloLeng);
 
-    unarch(&matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    // unarch(&matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    show(matrix, N);
+    // show(matrix, N);
 
     // showArr(archArr, archLeng);
 

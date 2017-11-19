@@ -8,6 +8,7 @@ void unarch(int*** matrix, int N, int** archArr, int* archLeng, int** zeroIndexA
 {
     bool b = false;
     int counter = 0;
+
     (*matrix) = new int *[N];
 
     for(int i = 0; i < N; i++)
@@ -33,6 +34,5 @@ void unarch(int*** matrix, int N, int** archArr, int* archLeng, int** zeroIndexA
             }
             b = false;
         }
-        
     }
 }
