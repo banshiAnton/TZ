@@ -28,29 +28,29 @@ int main()
     int *archArr(0);
     int *zeroIndexArr(0);
 
-    matrix[0][0] = 0;
+    matrix[0][0] = 5;
     matrix[0][1] = 0;
     matrix[0][2] = 5;
     matrix[0][3] = 6;
     matrix[0][4] = 8;
 
     matrix[1][0] = 9;
-    matrix[1][1] = 7;
+    matrix[1][1] = 0;
     matrix[1][2] = 8;
     matrix[1][3] = 0;
     matrix[1][4] = 5;
 
     matrix[2][0] = 9;
-    matrix[2][1] = 3;
+    matrix[2][1] = 0;
     matrix[2][2] = 5;
     matrix[2][3] = 7;
     matrix[2][4] = 8;
 
-    matrix[3][0] = 5;
+    matrix[3][0] = 0;
     matrix[3][1] = 0;
     matrix[3][2] = 0;
-    matrix[3][3] = 3;
-    matrix[3][4] = 8;
+    matrix[3][3] = 0;
+    matrix[3][4] = 0;
 
     matrix[4][0] = 7;
     matrix[4][1] = 0;
@@ -91,7 +91,11 @@ int main()
 
     //sum(matrix, matrix2, N);
     show(matrix, N);
-    deletLocalMaxMin(matrix, N, 1);
+    // deletLocalMaxMin(matrix, N, 1);
+
+    cout<<"\n";
+
+    delet(&matrix, &N, &N2);
 
     // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 

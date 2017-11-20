@@ -13,3 +13,5 @@ void sum(int**, int**, int);
 void unarch(int***, int, int**, int*, int**, int*);
 
 void deletLocalMaxMin(int **, int, int);
+
+void delet(int***, int*, int*);
