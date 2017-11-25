@@ -97,6 +97,9 @@ int main()
 
     delet(&matrix, &N, &N2);
 
+    cout<<"\n";
+
+    trans(&matrix, N, N2);
     // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
     // showArr(archArr, archLeng);

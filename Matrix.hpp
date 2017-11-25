@@ -15,3 +15,5 @@ void unarch(int***, int, int**, int*, int**, int*);
 void deletLocalMaxMin(int **, int, int);
 
 void delet(int***, int*, int*);
+
+void trans(int***, int, int);

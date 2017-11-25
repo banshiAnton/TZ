@@ -99,6 +99,9 @@ void delet(int*** matrix, int* N, int *N2)
             cout<<(*matrix)[i][j]<<" ";
         }
         cout<<endl;
-    }  
+    }
+
+    *N = c2;
+    *N2 = c3;  
 
 }
