@@ -95,11 +95,23 @@ int main()
 
     cout<<"\n";
 
-    delet(&matrix, &N, &N2);
+
+    put(&matrix, &N, &N2, 2, 2);
+
+    //delet(&matrix, &N, &N2);
 
     cout<<"\n";
 
-    trans(&matrix, N, N2);
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N2; j++)
+        {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+
+    //trans(&matrix, N, N2);
     // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
     // showArr(archArr, archLeng);

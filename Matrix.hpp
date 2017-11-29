@@ -17,3 +17,5 @@ void deletLocalMaxMin(int **, int, int);
 void delet(int***, int*, int*);
 
 void trans(int***, int, int);
+
+void put(int***, int*, int*, int, int);
