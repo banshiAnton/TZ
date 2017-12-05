@@ -1,2 +1,2 @@
-main: main.cpp make.cpp arch.cpp delet.cpp unarch.cpp show.cpp sum.cpp showArr.cpp deletLocalMaxMin.cpp trans.cpp
-	g++ main.cpp make.cpp arch.cpp delet.cpp unarch.cpp show.cpp sum.cpp put.cpp showArr.cpp deletLocalMaxMin.cpp trans.cpp -o main
+main: main.cpp make.cpp arch.cpp delet.cpp unarch.cpp show.cpp sort.cpp mul.cpp showArr.cpp deletLocalMaxMin.cpp trans.cpp
+	g++ main.cpp make.cpp arch.cpp delet.cpp unarch.cpp sort.cpp show.cpp mul.cpp put.cpp showArr.cpp deletLocalMaxMin.cpp trans.cpp -o main

@@ -1,8 +1,8 @@
+// MODIF 
+
 #include <iostream>
 
 #include "Matrix.hpp"
-
-using namespace std;
 
 void put(int*** matrix, int *N1, int *N2, int co1, int co2)
 {
@@ -10,14 +10,16 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
     int l3;
     int l4;
 
-    cin>>l3;
-    cout<<"\n";
+    std::cin>>l3;
+    std::cout<<"\n";
 
-    cin>>l4;
+    std::cin>>l4;
 
-    cout<<"\n";
+    std::cout<<"\n";
 
-    int **inputMatr = make(l3, 1);
+    int **inputMatr = make(l3, l4, 1);
+
+    show(inputMatr, l3, l4);
 
     if(co1 >= *N1) 
     {
@@ -141,8 +143,6 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
 
     }
 
-    cout<<"\n";
-
     for(int i = 0; i < l3; i++)
     {
         for(int j = 0; j < l4; j++)
@@ -150,6 +150,4 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
             (*matrix)[co1 + i][co2 + j] = inputMatr[i][j];
         }
     }
-
-    cout<<"\n";
 }

@@ -1,10 +1,10 @@
+// MODIF 
+
 #include <iostream>
 
 #include "Matrix.hpp"
 
-using namespace std;
-
-void unarch(int*** matrix, int N, int** archArr, int* archLeng, int** zeroIndexArr, int* zeloLeng)
+void unarch(int*** matrix, int N, int N2, int** archArr, int* archLeng, int** zeroIndexArr, int* zeloLeng)
 {
     bool b = false;
     int counter = 0;
@@ -13,8 +13,8 @@ void unarch(int*** matrix, int N, int** archArr, int* archLeng, int** zeroIndexA
 
     for(int i = 0; i < N; i++)
     {
-        (*matrix)[i] = new int [N];
-        for(int j = 0; j < N; j++)
+        (*matrix)[i] = new int [N2];
+        for(int j = 0; j < N2; j++)
         {
             int curentN = (i*N) + j;
 
@@ -35,4 +35,7 @@ void unarch(int*** matrix, int N, int** archArr, int* archLeng, int** zeroIndexA
             b = false;
         }
     }
+
+    delete [] *zeroIndexArr;
+    delete [] *archArr;
 }

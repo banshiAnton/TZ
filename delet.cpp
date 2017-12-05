@@ -1,8 +1,8 @@
+// MODIF
+
 #include <iostream>
 
 #include "Matrix.hpp"
-
-using namespace std;
 
 void delet(int*** matrix, int* N, int *N2)
 {
@@ -92,14 +92,6 @@ void delet(int*** matrix, int* N, int *N2)
         }
     }
 
-    for(i = 0; i < c2; i++)
-    {
-        for(j = 0; j < c3; j++)
-        {
-            cout<<(*matrix)[i][j]<<" ";
-        }
-        cout<<endl;
-    }
 
     *N = c2;
     *N2 = c3;  

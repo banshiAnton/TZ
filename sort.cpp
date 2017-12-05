@@ -1,17 +1,17 @@
+// MODIF 
+
 #include <iostream>
 
 #include "Matrix.hpp"
 
-using namespace std;
-
-void sort(int **matrix, int N, int index, int opt)
+void sort(int **matrix, int N1, int N2, int index, int opt)
 {
     if(opt)
     {
-        cout<<"\nSort by string index = "<<index<<"\n";
-        for(int i = 1; i < N; i++)
+        std::cout<<"\nSort by string index = "<<index<<"\n";
+        for(int i = 1; i < N2; i++)
         {
-            for(int j = 0; j < N - i; j++)
+            for(int j = 0; j < N2 - i; j++)
             {
                 if(matrix[index][j] > matrix[index][j+1])
                 {
@@ -23,10 +23,10 @@ void sort(int **matrix, int N, int index, int opt)
         }
     } else
     {
-        cout<<"\nSort by column index = "<<index<<"\n";
-        for(int i = 1; i < N; i++)
+        std::cout<<"\nSort by column index = "<<index<<"\n";
+        for(int i = 1; i < N1; i++)
         {
-            for(int j = 0; j < N - i; j++)
+            for(int j = 0; j < N1 - i; j++)
             {
                 if(matrix[j][index] > matrix[j+1][index])
                 {
@@ -37,5 +37,4 @@ void sort(int **matrix, int N, int index, int opt)
             }
         }
     }
-    show(matrix, N);
 }

@@ -2,14 +2,12 @@
 
 #include "Matrix.hpp"
 
-using namespace std;
-
 void showArr(int* arr, int N)
 {
-    cout<<"\n";
+    std::cout<<"\n\n";
     for(int i = 0 ; i < N; i++)
     {
-        cout<<arr[i]<<" ";
+        std::cout<<arr[i]<<" ";
     }
-    cout<<"\n";
+    std::cout<<"\n";
 }

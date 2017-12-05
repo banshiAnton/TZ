@@ -1,12 +1,12 @@
+// MODIF
+
 #include <iostream>
 #include <algorithm> 
 #include <cmath>
 
 #include "Matrix.hpp"
 
-using namespace std;
-
-void deletLocalMaxMin(int **matrix, int N, int opt)
+void deletLocalMaxMin(int **matrix, int N, int N2, int opt)
 {
     int max = -pow(2,31);
     int min = pow(2,31) - 1;
@@ -20,7 +20,7 @@ void deletLocalMaxMin(int **matrix, int N, int opt)
         {
             int j = 0;
 
-            while(j < N)
+            while(j < N2)
             {
                 if(b) 
                 {
@@ -44,7 +44,7 @@ void deletLocalMaxMin(int **matrix, int N, int opt)
                 }
 
                 j++;
-                if((j == N) && b)
+                if((j == N2) && b)
                 {
                     b = false;
                     j = minIndex > maxIndex ? maxIndex : minIndex;
@@ -63,7 +63,7 @@ void deletLocalMaxMin(int **matrix, int N, int opt)
         {
             int j = 0;
 
-            while(j < N)
+            while(j < N2)
             {
                 if(b) 
                 {
@@ -87,7 +87,7 @@ void deletLocalMaxMin(int **matrix, int N, int opt)
                 }
 
                 j++;
-                if((j == N) && b)
+                if((j == N2) && b)
                 {
                     b = false;
                     j = minIndex > maxIndex ? maxIndex : minIndex;
@@ -101,6 +101,4 @@ void deletLocalMaxMin(int **matrix, int N, int opt)
             b = true;
         }
     }
-
-    show(matrix, N);
 }

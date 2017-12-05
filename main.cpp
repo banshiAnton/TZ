@@ -2,148 +2,110 @@
 
 #include "Matrix.hpp"
 
-using namespace std;
-
 int main()
 {
     //cout<<"Make Matrix NxN\nInput N = ";
-    int N = 5;
+    int N1 = 5;
     int N2 = 5;
+
+    int *archArr(0);
+    int *zeroIndexArr(0);
+
     int archLeng = 0;
     int zeloLeng = 0;
+
+    bool isArch = false;
+
     // cin>>N;
 
     // int opt1;
     // cout<<"\nMake Matrix yourself or random (0 ro 1) ?";
     // cin>>opt1;
 
-    int **matrix = new int *[N];// = make(N, opt1);
-    int **matrix2 = new int *[N];
-    for(int i = 0; i < N; i++)
-    {
-        matrix[i] = new int [N];
-        matrix2[i] = new int [N];
-    };
-
-    int *archArr(0);
-    int *zeroIndexArr(0);
-
-    matrix[0][0] = 5;
-    matrix[0][1] = 0;
-    matrix[0][2] = 5;
-    matrix[0][3] = 6;
-    matrix[0][4] = 8;
-
-    matrix[1][0] = 9;
-    matrix[1][1] = 0;
-    matrix[1][2] = 8;
-    matrix[1][3] = 0;
-    matrix[1][4] = 5;
-
-    matrix[2][0] = 9;
-    matrix[2][1] = 0;
-    matrix[2][2] = 5;
-    matrix[2][3] = 7;
-    matrix[2][4] = 8;
-
-    matrix[3][0] = 0;
-    matrix[3][1] = 0;
-    matrix[3][2] = 0;
-    matrix[3][3] = 0;
-    matrix[3][4] = 0;
-
-    matrix[4][0] = 7;
-    matrix[4][1] = 0;
-    matrix[4][2] = 0;
-    matrix[4][3] = 5;
-    matrix[4][4] = 1;
+    int **matrix = make(N1, N2, 1);
 
 
-    matrix2[0][0] = 0;
-    matrix2[0][1] = 0;
-    matrix2[0][2] = 5;
-    matrix2[0][3] = 6;
-    matrix2[0][4] = 8;
+    show(matrix, N1, N2);
 
-    matrix2[1][0] = 9;
-    matrix2[1][1] = 7;
-    matrix2[1][2] = 1;
-    matrix2[1][3] = 0;
-    matrix2[1][4] = 5;
+    arch(matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    matrix2[2][0] = 9;
-    matrix2[2][1] = 3;
-    matrix2[2][2] = 5;
-    matrix2[2][3] = 74;
-    matrix2[2][4] = 8;
+    showArr(archArr, archLeng);
 
-    matrix2[3][0] = 5;
-    matrix2[3][1] = 0;
-    matrix2[3][2] = 0;
-    matrix2[3][3] = 3;
-    matrix2[3][4] = 8;
+    showArr(zeroIndexArr, zeloLeng);
 
-    matrix2[4][0] = 5;
-    matrix2[4][1] = 54;
-    matrix2[4][2] = 5;
-    matrix2[4][3] = 5;
-    matrix2[4][4] = 1;
+    unarch(&matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    //sum(matrix, matrix2, N);
-    show(matrix, N);
-    // deletLocalMaxMin(matrix, N, 1);
+    show(matrix, N1, N2);
 
-    cout<<"\n";
+    delet(&matrix, &N1, &N2);
 
+    show(matrix, N1, N2);
 
-    put(&matrix, &N, &N2, 2, 2);
+    arch(matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    //delet(&matrix, &N, &N2);
+    showArr(archArr, archLeng);
 
-    cout<<"\n";
+    showArr(zeroIndexArr, zeloLeng);
 
-    for(int i = 0; i < N; i++)
-    {
-        for(int j = 0; j < N2; j++)
-        {
-            cout<<matrix[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
+    unarch(&matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    //trans(&matrix, N, N2);
-    // arch(matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    show(matrix, N1, N2);
 
-    // showArr(archArr, archLeng);
+    deletLocalMaxMin(matrix, N1, N2, 0);
 
-    // showArr(zeroIndexArr, zeloLeng);
+    show(matrix, N1, N2);
 
-    // unarch(&matrix, N, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+    sort(matrix, N1, N2, 2, 0);
 
-    // show(matrix, N);
+    show(matrix, N1, N2);
 
-    // showArr(archArr, archLeng);
+    arch(matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    // showArr(zeroIndexArr, zeloLeng);
+    showArr(archArr, archLeng);
 
-    // for(int i = 0 ; i < archLeng; i++)
-    // {
-    //     cout<<archArr[i]<<" ";
-    // }
+    showArr(zeroIndexArr, zeloLeng);
 
-    // cout<<"\n";
+    unarch(&matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
 
-    // int **matrix = {
+    show(matrix, N1, N2);
 
-    //     {0,0,5,6,8},
-    //     {9,7,8,0,5},
-    //     {9,3,5,7,8},
-    //     {5,0,0,3,8},
-    //     {7,0,0,5,1}
+    trans(matrix, N1, N2);
 
-    // };
-    
-    //sort(matrix, N, 1, 1);
+    show(matrix, N1, N2);
 
-    //sort(matrix, N, 2, 0);
+    put(&matrix, &N1, &N2, 2, 2);
+
+    show(matrix, N1, N2);
+
+    delet(&matrix, &N1, &N2);
+
+    show(matrix, N1, N2);
+
+    arch(matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    showArr(archArr, archLeng);
+
+    showArr(zeroIndexArr, zeloLeng);
+
+    unarch(&matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    show(matrix, N1, N2);
+
+    mul(&matrix, N1, &N2);
+
+    show(matrix, N1, N2);
+
+    deletLocalMaxMin(matrix, N1, N2, 0);
+
+    show(matrix, N1, N2);
+
+    arch(matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    showArr(archArr, archLeng);
+
+    showArr(zeroIndexArr, zeloLeng);
+
+    unarch(&matrix, N1, N2, &archArr, &archLeng, &zeroIndexArr, &zeloLeng);
+
+    show(matrix, N1, N2);
 }
