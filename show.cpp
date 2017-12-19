@@ -15,4 +15,5 @@ void show(int **matrix, int N1, int N2)
         }
         std::cout<<"\n";
     }
+    std::cout<<"\n";
 }

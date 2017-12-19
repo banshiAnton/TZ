@@ -10,14 +10,16 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
     int l3;
     int l4;
 
+    std::cout<<"\nInput Number of Rows your input matrix = ";
     std::cin>>l3;
-    std::cout<<"\n";
-
+    std::cout<<"\nInput Number of Cols your input matrix = ";
     std::cin>>l4;
 
-    std::cout<<"\n";
+    int opt;
+    std::cout<<"\nInput item to your matrix yourself or random(0 ro 1) ?\n";
+    std::cin>>opt;
 
-    int **inputMatr = make(l3, l4, 1);
+    int **inputMatr = make(l3, l4, opt);
 
     show(inputMatr, l3, l4);
 
@@ -63,7 +65,6 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
         {
             for(int j = co2; (j < *N2) && ((j - co2) < l4); j++)
             {
-                //cout<<matr[i][j]<<" ";
                 if((*matrix)[i][j])
                 {
                     b = true;
@@ -86,7 +87,6 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
                         for(int j2 = 0; j2 < *N2; j2++)
                         {
                             arr[i2][j2] = (*matrix)[itr][jtr++];
-                            //cout<<arr[i2][j2]<<" ";
                         }
                         itr++;
                         jtr = 0;
@@ -95,10 +95,8 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
                         for(int j2 = 0; j2 < *N2; j2++)
                         {
                             arr[i2][j2] = 0;
-                            //cout<<arr[i2][j2]<<" ";
                         }
                     }
-                    //cout<<"\n";
                 }
 
                 for(int i3 = 0; i3 < *N1-1; i3++)
@@ -110,8 +108,6 @@ void put(int*** matrix, int *N1, int *N2, int co1, int co2)
                 (*matrix) = arr;
 
             }
-
-            //cout<<"\n";
         }
 
     }

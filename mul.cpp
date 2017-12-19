@@ -7,10 +7,14 @@ void mul(int*** matrix, int N1, int* N2)
 
     int N3 = 0;
 
-    std::cout<<"Input colum number";
+    std::cout<<"\nInput colum number = ";
     std::cin>>N3;
 
-    int **sumMatr = make(*N2, N3, 1);
+    int opt;
+    std::cout<<"\nInput item to your matrix yourself or random(0 ro 1) ?\n";
+    std::cin>>opt;
+
+    int **sumMatr = make(*N2, N3, opt);
 
     show(sumMatr, *N2, N3);
 

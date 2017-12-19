@@ -9,5 +9,5 @@ void showArr(int* arr, int N)
     {
         std::cout<<arr[i]<<" ";
     }
-    std::cout<<"\n";
+    std::cout<<"\n\n";
 }
